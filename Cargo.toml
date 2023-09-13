@@ -1,9 +1,12 @@
 [package]
-name = "hello_proc_macro"
+name = "proc_macro"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[features]
+derive = ["derive_my_trait"]
+
 [dependencies]
-derive_my_trait = { path = "./derive_my_trait" }
+derive_my_trait = { path = "./derive_my_trait", optional = true }
